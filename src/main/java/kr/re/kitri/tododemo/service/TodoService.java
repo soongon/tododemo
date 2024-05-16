@@ -22,6 +22,7 @@ public class TodoService {
     }
 
     public Todo writeTodo(Todo todo) {
-        return todoRepository.insertTodo(todo);
+        todoRepository.insertTodo(todo);
+        return todo;
     }
 }

@@ -11,5 +11,5 @@ import java.util.List;
 public interface TodoRepository {
     List<Todo> selectAllTodos();
     Todo selectTodoById(String todoId);
-    Todo insertTodo(Todo todo);
+    void insertTodo(Todo todo);
 }

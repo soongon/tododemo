@@ -9,4 +9,9 @@
                 completed
         FROM    todo
     </select>
+
+    <insert id="insertTodo" parameterType="kr.re.kitri.tododemo.model.Todo">
+        insert into     todo (todoId, content, completed)
+        values          (#{todoId}, #{content}, #{completed});
+    </insert>
 </mapper>
