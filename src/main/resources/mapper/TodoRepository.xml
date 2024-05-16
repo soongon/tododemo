@@ -10,6 +10,16 @@
         FROM    todo
     </select>
 
+    <select id="selectTodoById"
+            parameterType="int"
+            resultType="kr.re.kitri.tododemo.model.Todo">
+        SELECT  todoid,
+                content,
+                completed
+        FROM    todo
+        WHERE   todoId = #{todoId}
+    </select>
+
     <insert id="insertTodo" parameterType="kr.re.kitri.tododemo.model.Todo">
         insert into     todo (todoId, content, completed)
         values          (#{todoId}, #{content}, #{completed});

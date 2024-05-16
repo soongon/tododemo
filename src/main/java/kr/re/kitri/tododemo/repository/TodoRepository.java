@@ -10,6 +10,6 @@ import java.util.List;
 @Mapper
 public interface TodoRepository {
     List<Todo> selectAllTodos();
-    Todo selectTodoById(String todoId);
+    Todo selectTodoById(int todoId);
     void insertTodo(Todo todo);
 }

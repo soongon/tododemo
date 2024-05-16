@@ -17,7 +17,7 @@ public class TodoService {
         return todoRepository.selectAllTodos();
     }
 
-    public Todo getTodoDetailById(String todoId) {
+    public Todo getTodoDetailById(int todoId) {
         return todoRepository.selectTodoById(todoId);
     }
 
