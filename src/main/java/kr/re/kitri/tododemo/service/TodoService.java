@@ -5,21 +5,23 @@ import kr.re.kitri.tododemo.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TodoService {
 
     @Autowired
     private TodoRepository todoRepository;
 
-    public String getAllTodos() {
+    public List<Todo> getAllTodos() {
         return todoRepository.selectAllTodos();
     }
 
-    public String getTodoDetailById(String todoId) {
+    public Todo getTodoDetailById(String todoId) {
         return todoRepository.selectTodoById(todoId);
     }
 
-    public String writeTodo(Todo todo) {
+    public Todo writeTodo(Todo todo) {
         return todoRepository.insertTodo(todo);
     }
 }
