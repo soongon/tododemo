@@ -7,7 +7,7 @@
         SELECT  todoid,
                 content,
                 completed
-        FROM    todo_for_error
+        FROM    todo
     </select>
 
     <select id="selectTodoById"
