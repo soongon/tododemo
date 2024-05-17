@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -34,11 +35,12 @@ public class TodoServiceTests {
 
     // 할일 등록 메소드 테스트케이스
     @Test
-    public void testWriteTod() {
+    @Transactional
+    public void testWriteTodo() {
         // (450, "강아지 산책", false)
         // 등록 후 450번으로 조회하여 content가 "강아지 산책" 이면 성공
-        todoRepository.insertTodo(new Todo(450, "강아지 산책", false));
-        Todo todo = todoRepository.selectTodoById(450);
+        todoRepository.insertTodo(new Todo(470, "강아지 산책", false));
+        Todo todo = todoRepository.selectTodoById(470);
         Assertions.assertEquals("강아지 산책", todo.getContent());
     }
 }
