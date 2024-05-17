@@ -21,7 +21,6 @@ public class TodoController {
 
     @GetMapping("/todos")
     public List<Todo> todos() {
-        log.debug("전체보기 요청 와서 실행합니다.");
         return todoService.getAllTodos();
     }
 
@@ -32,7 +31,6 @@ public class TodoController {
 
     @PostMapping("/todos")
     public Todo writeTodo(@RequestBody Todo todo) {
-        System.out.println(todo);
         return todoService.writeTodo(todo);
     }
 
